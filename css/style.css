@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -35,12 +36,11 @@ body {
 }
 
 .wrapper form {
-    margin: 40px 0;
+    margin: 0px 0;
 }
 
 form .field {
     width: 100%;
-    margin-bottom: 20px;
 }
 
 form .field.shake {
@@ -48,14 +48,17 @@ form .field.shake {
 }
 
 @keyframes shake {
+
     0%,
     100% {
         margin-left: 0px;
     }
+
     20%,
     80% {
         margin-left: -12px;
     }
+
     40%,
     60% {
         margin-left: 12px;
@@ -66,13 +69,14 @@ form .field .input-area {
     height: 50px;
     width: 100%;
     position: relative;
+    left: 0;
 }
 
 form input {
     width: 100%;
     height: 100%;
     outline: none;
-    padding: 0 45px;
+    padding: 8px 45px;
     font-size: 18px;
     background: none;
     caret-color: #5372F0;
@@ -112,38 +116,31 @@ form .field.error input {
 }
 
 form input:focus~.icon,
-form .field.valid .icon {
+form.field.valid.icon {
     color: #5372F0;
 }
 
-form .field.shake input:focus~.icon,
-form .field.error input:focus~.icon {
+form .field .shake input:focus~.icon,
+form .field .error input:focus~.icon {
     color: #bfbfbf;
-}
-
-form input::placeholder {
-    color: #bfbfbf;
-    font-size: 17px;
 }
 
 form .field .error-txt {
     color: #dc3545;
     text-align: left;
-    margin-top: 5px;
 }
 
 form .field .error {
     display: none;
 }
 
-form .field.shake .error,
-form .field.error .error {
+form .field.shake.error,
+form .field .error.error {
     display: block;
 }
 
 form .pass-txt {
     text-align: left;
-    margin-right: 3px;
 }
 
 .wrapper a {
@@ -169,4 +166,37 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     background: #2c52ed;
+}
+
+label.placeholder-moves-up-container {
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+}
+
+span.placeholder-moves-up {
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+    z-index: 25;
+    background-color: white;
+}
+
+input:focus+span.placeholder-moves-up,
+input:not(:placeholder-shown)+span.placeholder-moves-up {
+    opacity: 1;
+    transform: scale(0.9) translateY(-60%) translateX(0px);
+}
+
+/* For IE Browsers*/
+input:focus+span.placeholder-moves-up,
+input:not(:-ms-input-placeholder)+span.placeholder-moves-up {   
+    opacity: 1;
+    transform: scale(0.9) translateY(-60%) translateX(10px);
 }
