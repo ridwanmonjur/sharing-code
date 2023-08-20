@@ -31,3 +31,13 @@ function showFlashMessage(message, type) {
   const flashMessage = document.querySelector(".flash-message");
   flashMessage.classList.toggle("d-none");
 }
+
+// Toggle password
+function togglePassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
