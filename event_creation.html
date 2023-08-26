@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- Don't remove this css -->
+    <link rel="stylesheet" href="css/event-creation.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img width="160px" height="60px" src="css/images/logo-default.png" alt="">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-menu menu-toggle"
+            onclick="toggleNavbar()"
+            >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <div class="search-bar d-none-at-mobile">
+            <input type="text" name="search" id="search" placeholder="Search for events">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-search">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </div>
+        <div class="nav-buttons">
+            <img width="50px" height="40px" src="css/images/navbar-account.png" alt="">
+            <img width="70px" height="40px" src="css/images/navbar-crown.png" alt="">
+        </div>
+    </nav>
+    <nav class="mobile-navbar d-centered-at-mobile d-none">
+        <div class="search-bar search-bar-mobile ">
+            <input type="text" name="search" id="search" placeholder="Search for events">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-search" style="left: 40px;">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </div>
+        <div class="nav-buttons search-bar-mobile d-centered-at-mobile">
+            <img width="50px" height="40px" src="css/images/navbar-account.png" alt="">
+            <img width="70px" height="40px" src="css/images/navbar-crown.png" alt="">
+        </div>
+    </nav>
+    <main>
+        <section class="time-line-box">
+            <div class="swiper-container text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide__left">
+                        <div class="timestamp"><span class="date">Homepage</span></div>
+                        <div class="status__left"><span></span></div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="timestamp"><span class="date">Details</span></div>
+                        <div class="status"><span></span></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="timestamp"><span class="date">Payment</span></div>
+                        <div class="status"><span></span></div>
+                    </div>
+                    <div class="swiper-slide swiper-slide__right">
+                        <div class="timestamp"><span class="date">Launch</span></div>
+                        <div class="status__right"><span></span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="text-center">
+                <header class="welcome">
+                    <u>
+                        <h2>
+                            Welcome to Splash's Event Creator
+                        </h2>
+                    </u>
+                    <br><br><br>
+                    <p class="create-online-esports">
+                        Create online esports events all on your own, right here on Splash, in just 4 steps.
+                    </p>
+                </header>
+                <input type="submit" value="Continue">
+            </div> -->
+
+            <!-- <div class="text-center">
+                <header class="welcome">
+                    <u>
+                        <h5>
+                            Step 1:
+                        </h5>
+                    </u>
+                    <u>
+                        <h3>
+                            Welcome to Splash's Event Creator
+                        </h3>
+                    </u>
+                </header>
+                <div class="dropdown-container">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Select Game Title
+                            <span class="dropbtn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Select Game Title
+                            <span class="dropbtn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Select Game Title
+                            <span class="dropbtn-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="text-center">
+                <header class="welcome">
+                    <u>
+                        <h5>
+                            Step 2:
+                        </h5>
+                    </u>
+                    <u>
+                        <h3>
+                            Details page fetched by backend
+                        </h3>
+                    </u>
+                </header>
+            </div> -->
+
+            <!-- <div class="text-center">
+                <header class="welcome">
+                    <u>
+                        <h5>
+                            Step 3:
+                        </h5>
+                    </u>
+                    <u>
+                        <h3>
+                            Complete the Payment
+                        </h3>
+                    </u>
+                </header>
+                <div class="payment-summary" style="margin-top: -30px;">
+                    <h5>Payment Summary </h5>
+                    <div>Event Creation</div>
+                    <br>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;Type: League</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;Tier: Dolphin</div>
+                    <br>
+                    <div class="total-flexbox">
+                        <span>TOTAL</span>
+                        <span>RM 5, 000.00</span>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <input type="submit" class="choose-payment-method" value="Choose a payment method">
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="text-center">
+                <header class="welcome">
+                    <u>
+                        <h5>
+                            Step 4:
+                        </h5>
+                    </u>
+                    <u>
+                        <h3>
+                            Launch your Event
+                        </h3>
+                    </u>
+                </header>
+                <div class="payment-summary" style="margin-top: -30px;">
+                    <h5>Payment Summary </h5>
+                    <div>Event Creation</div>
+                    <br>
+                   
+                    <br>
+                    <div class="total-flexbox">
+                        <span>TOTAL</span>
+                        <span>RM 5, 000.00</span>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <input type="submit" class="choose-payment-method" value="Choose a payment method">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/event_creation/timeline.js"></script>
+
+    <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>
