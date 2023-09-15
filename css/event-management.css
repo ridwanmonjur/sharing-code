@@ -40,7 +40,7 @@ main {
     padding: 0px 10px;
     align-items: center;
     justify-content: center;
-    background-image: url("images/event-management-bg.png");
+    background-image: url("../images/event-management-bg.png");
 }
 
 .navbar {
@@ -125,6 +125,11 @@ input[type="submit"], .oceans-gaming-default-button {
     /* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
 }
 
+.oceans-gaming-default-button-small{
+    width: 80px !important;
+    padding: 2px 3px !important;
+}
+
 .oceans-gaming-default-button{
     width: fit-content;
     padding-left: 20px;
@@ -156,6 +161,9 @@ input[type="submit"], .oceans-gaming-default-button {
 .flexbox-welcome{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: lighter;
 }
 
 .flexbox-filter{
@@ -168,6 +176,7 @@ input[type="submit"], .oceans-gaming-default-button {
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 1%;
 }
 
 
@@ -190,10 +199,19 @@ input[type="submit"]:active {
 .rounded-box {
     position: relative;
     border-radius: 30px 30px;
-    border: 1px solid black;
+    border: 3px solid #8CCD39;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
+}
+
+.rounded-box .centered-absolute-game-tier{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -40px;
+    left: 75px;
 }
 
 .rounded-box a {
@@ -209,41 +227,32 @@ input[type="submit"]:active {
 }
 
 
-.welcome {
-    font-weight: lighter;
-    color: #2E4B59 !important;
-}
-
-.welcome p {
-    width: 600px;
-    margin: auto;
-    font-weight: lighter;
-    text-overflow: clip;
-    font-size: larger;
-}
-
 .box-width{
     width: 600px !important;
     max-width: 80vw !important;
     margin: auto !important;
 }
 
-.flexbox {
+.card-image{
     width: 100%;
-    display: block;
+    border-bottom: 3px solid #8CCD39;
 }
 
-.image-card{
-    width: 100%;
-    border-bottom: 1px solid black;
-}
-
-.image-card img{
+.card-image img{
     width: 100%;
     max-height: 200px;
     object-fit: cover;
     overflow: hidden;   
     border-radius: 30px 30px 0 0;
+}
+
+.card-text{
+    padding: 10px 20px;
+}
+
+.card-text .small-text{
+    margin-top: -10px;
+    font-size: smaller;
 }
 
 @media screen and (min-width: 600px) {
