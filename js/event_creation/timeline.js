@@ -1,9 +1,3 @@
-function toggleNavbar() {
-    const x = document.querySelector("nav.mobile-navbar");
-    console.log({ x })
-    x.classList.toggle("d-none");
-}
-
 function goToNextScreen(nextId, nextTimeline) {
     const allIDs = [
         'step-0',

@@ -40,7 +40,7 @@ main {
     padding: 0px 10px;
     align-items: center;
     justify-content: center;
-    background-image: url("images/event-creation-bg.png");
+    background-image: url("css/images/event-creation-bg.png");
 }
 
 .navbar {
@@ -53,6 +53,8 @@ main {
 
 .navbar img,
 .navbar svg,
+.search-bar svg,
+nav button,
 nav img,
 nav svg {
     cursor: pointer;
@@ -60,7 +62,9 @@ nav svg {
 
 .navbar img:hover,
 nav img:hover,
+.search-bar svg:hover,
 .navbar svg:hover,
+nav button:hover,
 nav svg:hover {
     transform: scale(1.1);
 }
@@ -68,6 +72,8 @@ nav svg:hover {
 
 .navbar img:active,
 nav img:active,
+nav button:active,
+.search-bar svg:active,
 .navbar svg:active,
 nav svg:active {
     transform: scale(1.1);
@@ -96,7 +102,6 @@ nav svg:active {
     max-width: 80vw;
     /* caret-color: #43A4D7;
     color: #43A4D7; */
-
 }
 
 .search-bar svg {
@@ -172,7 +177,7 @@ nav svg:active {
     padding: 0px 10px;
     display: flex;
     justify-content: center;
-    border-top: 2px solid green;
+    border-top: 2px solid gray;
     width: var(--timeline-normal-width-mobile) ! important;
     position: relative;
     transition: all 200ms ease-in;
@@ -182,7 +187,7 @@ nav svg:active {
     padding: 0px 10px;
     display: flex;
     justify-content: flex-end;
-    border-top: 2px solid green;
+    border-top: 2px solid gray;
     width: var(--timeline-start-width-mobile) ! important;
     position: relative;
     transition: all 200ms ease-in;
@@ -192,7 +197,7 @@ nav svg:active {
     padding: 0px 10px;
     display: flex;
     justify-content: flex-end;
-    border-top: 2px solid green;
+    border-top: 2px solid gray;
     width: var(--timeline-start-width-mobile) ! important;
     position: relative;
     transition: all 200ms ease-in;
@@ -300,9 +305,6 @@ input[type="submit"], .oceans-gaming-default-button {
     background: #A6A6A6;
     color: white;
 }
-
-
-
 
 input[type="submit"]:hover {
     background: #a3c3d3;
@@ -484,6 +486,7 @@ input[type="submit"]:active {
         left: 20px;
     }
 
+    
     .swiper-slide {
         text-indent: 0px;
         font-size: 1rem;
@@ -512,6 +515,13 @@ input[type="submit"]:active {
         width: var(--timeline-start-width-desktop) ! important;
 
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .search-bar input {
+        width: 600px;
+    }
+
 }
 
 /* .dropdown-content a:hover {
